@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Anushka",
+      "username": "anushkan",
+      "email": "anu@gmail.com",
+      "contact": 8010133160,
+      "password": "anushkan",
+      "profilePic": "uploads/profilepic.jpg"
+    },
+    {
+      "id": "4246",
+      "name": "Anuja Nemishte",
+      "username": "anujan",
+      "email": "anuja@gmail.com",
+      "contact": "9422408729",
+      "password": "Anuja@18",
+      "profilePic": "uploads/profilepic.jpg"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "0621d1ac-3aef-4482-ad5d-ff209fd82bb2",
+      "status": "Done",
+      "name": "Gather kanban board Requirements",
+      "priority": "High",
+      "deadline": "2025-06-29"
+    },
+    {
+      "id": "b7735d1a-ad8f-42a4-a7e8-3b06a068bc1b",
+      "status": "Backlog",
+      "name": "Create UI Design using figma",
+      "priority": "Medium",
+      "deadline": "2025-06-30"
+    },
+    {
+      "id": "47841d2d-790c-4681-9b9f-31ac70332c44",
+      "status": "To Do",
+      "name": "Use RTK Queries for Api",
+      "priority": "High",
+      "deadline": "2025-07-01"
+    },
+    {
+      "id": "cb7b76ac-03d6-4bb5-a7af-f24712b4df55",
+      "status": "In Progress",
+      "name": "Project Set up",
+      "priority": "High",
+      "deadline": "2025-06-27"
+    },
+    {
+      "id": "922be6fa-4c6d-4d20-868d-af087fdd5bbf",
+      "status": "In Progress",
+      "name": "Adding new todo task",
+      "priority": "Medium",
+      "deadline": "2025-06-28"
+    },
+    {
+      "id": "55f9d37d-94df-43c6-b919-1dc1b9fd518a",
+      "status": "To Do",
+      "name": "rtyu",
+      "priority": "Low",
+      "deadline": "2025-06-06"
+    }
+  ]
+}
