@@ -22,45 +22,87 @@
   "tasks": [
     {
       "id": "0621d1ac-3aef-4482-ad5d-ff209fd82bb2",
-      "status": "Done",
+      "status": "0621d1ac-3aef-4482-ad5d-ff209fd82bb2",
       "name": "Gather kanban board Requirements",
       "priority": "High",
       "deadline": "2025-06-29"
     },
     {
       "id": "b7735d1a-ad8f-42a4-a7e8-3b06a068bc1b",
-      "status": "Backlog",
+      "status": "47841d2d-790c-4681-9b9f-31ac70332c44",
       "name": "Create UI Design using figma",
       "priority": "Medium",
       "deadline": "2025-06-30"
     },
     {
       "id": "47841d2d-790c-4681-9b9f-31ac70332c44",
-      "status": "To Do",
+      "status": "47841d2d-790c-4681-9b9f-31ac70332c44",
       "name": "Use RTK Queries for Api",
       "priority": "High",
       "deadline": "2025-07-01"
     },
     {
       "id": "cb7b76ac-03d6-4bb5-a7af-f24712b4df55",
-      "status": "In Progress",
+      "status": "55f9d37d-94df-43c6-b919-1dc1b9fd518a",
       "name": "Project Set up",
       "priority": "High",
       "deadline": "2025-06-27"
     },
     {
       "id": "922be6fa-4c6d-4d20-868d-af087fdd5bbf",
-      "status": "In Progress",
+      "status": "cb7b76ac-03d6-4bb5-a7af-f24712b4df55",
       "name": "Adding new todo task",
       "priority": "Medium",
       "deadline": "2025-06-28"
     },
     {
       "id": "55f9d37d-94df-43c6-b919-1dc1b9fd518a",
-      "status": "To Do",
+      "status": "55f9d37d-94df-43c6-b919-1dc1b9fd518a",
       "name": "rtyu",
       "priority": "Low",
       "deadline": "2025-06-06"
+    },
+    {
+      "id": "203e856e-67d8-4fd3-8df6-e1a989d177fe",
+      "status": "203e856e-67d8-4fd3-8df6-e1a989d177fe",
+      "name": "Drink Water",
+      "priority": "High",
+      "deadline": "2025-06-30"
+    },
+    {
+      "id": "8824add3-52a0-49ca-af6e-aa3da9e3c99f",
+      "status": "8824add3-52a0-49ca-af6e-aa3da9e3c99f",
+      "name": "Go to Gym",
+      "priority": "High",
+      "deadline": "2025-06-29"
+    },
+    {
+      "id": "f2a1585a-15b0-4302-bc4e-2cedf50497e0",
+      "status": "f2a1585a-15b0-4302-bc4e-2cedf50497e0",
+      "name": "Go to Gym",
+      "priority": "High",
+      "deadline": "2025-06-29"
+    },
+    {
+      "id": "67babb35-78e2-44fa-9422-c8824e03c05a",
+      "status": "Done",
+      "name": "Go to Gym",
+      "priority": "High",
+      "deadline": "2025-06-30"
+    },
+    {
+      "id": "fb719dba-2cc3-486c-8c02-d66ef01db5f1",
+      "status": "Backlog",
+      "name": "Drink Water",
+      "priority": "High",
+      "deadline": "2025-06-30"
+    },
+    {
+      "id": "d09c85e3-0a1a-41cb-84d6-b6a01e2fd107",
+      "status": "Done",
+      "name": "Drink beer",
+      "priority": "High",
+      "deadline": "2025-06-23"
     }
   ]
 }

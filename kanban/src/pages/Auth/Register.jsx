@@ -3,7 +3,7 @@ import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 import { useAddUsersMutation } from "../../redux/slices/apiSlice";
 import { useNavigate } from "react-router-dom";
-
+import "./Register.css";
 function Register() {
   const [addUser] = useAddUsersMutation();
   const navigate = useNavigate();
@@ -55,8 +55,7 @@ function Register() {
   return (
     <div
       className="d-flex justify-content-center align-items-center"
-      style={{ minHeight: "90vh" }}
-    >
+      style={{ minHeight: "100vh", padding: "20px" }}    >
       <Container>
         <Row className="justify-content-center">
           <Col xs={12} sm={10} md={6} lg={7}>
@@ -67,29 +66,12 @@ function Register() {
                 </h4>
                 <Form onSubmit={handleSubmit}>
                   <div className="mb-4">
-                    <div
-                      style={{
-                        width: "150px",
-                        height: "150px",
-                        borderRadius: "50%",
-                        overflow: "hidden",
-                        border: "2px solid #ccc",
-                        margin: "auto",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "#f8f9fa",
-                      }}
-                    >
+                    <div className="profile">
                       {preview ? (
                         <img
                           src={preview}
                           alt="profile"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                          }}
+                          className="profile-pic "
                         />
                       ) : (
                         <FaUser size={40} color="#6c757d" />

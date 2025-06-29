@@ -10,7 +10,15 @@ import {
 import CustomDeleteModal from "../../utils/CustomDeleteModal";
 import { useDeleteTaskMutation } from "../../redux/slices/apiSlice";
 
-function TaskCard({ task, column, onMove, setTaskId, onDelete, handleOpen }) {
+function TaskCard({
+  task,
+  column,
+  onMove,
+  setTaskId,
+  onDelete,
+  handleOpen,
+  setActiveCard,
+}) {
   const getCardColor = (priority) => {
     switch (priority) {
       case "High":
@@ -30,19 +38,18 @@ function TaskCard({ task, column, onMove, setTaskId, onDelete, handleOpen }) {
   const handleClose = () => setDeleteModal(false);
   const [deleteId, setDeleteId] = useState(null);
   const handleDeleteOpen = (id) => {
-  setDeleteId(id);
-  setDeleteModal(true);
-};
-
+    setDeleteId(id);
+    setDeleteModal(true);
+  };
 
   const handleDeleteTask = async () => {
-  try {
-    await deleteTask(deleteId);
-    setDeleteModal(false);
-  } catch (error) {
-    console.log(error);
-  }
-};
+    try {
+      await deleteTask(deleteId);
+      setDeleteModal(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const deleteTaskModal = (id) => {
     if (deleteModal) {
@@ -57,12 +64,17 @@ function TaskCard({ task, column, onMove, setTaskId, onDelete, handleOpen }) {
       );
     }
   };
+  console.log(task, "TS");
+
   return (
     <>
       {deleteTaskModal()}
       <Card
-        className="mb-3 shadow-sm"
+        className="mb-3 shadow-sm task-card"
         style={{ backgroundColor: getCardColor(task.priority) }}
+        draggable
+        onDragStart={() => setActiveCard(task.id)}
+        onDragEnd={() => setActiveCard(null)}
       >
         <Card.Body className="p-2">
           <div className="d-flex justify-content-between align-items-start">

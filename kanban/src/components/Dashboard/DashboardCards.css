@@ -1,0 +1,17 @@
+.total-task-card {
+  background-color: #cce5ff;
+  height: 200px;
+  color: #004085;
+}
+
+.completed-task-card {
+  background-color: #d4edda;
+  height: 200px;
+  color: #155724;
+}
+
+.pending-task-card {
+  background-color: #fff3cd;
+  height: 200px;
+  color: #856404;
+}

@@ -11,14 +11,15 @@ function TaskBoard() {
   const columns = ["Backlog", "To Do", "In Progress", "Done"];
   const { data: tasksdata } = useGetTasksQuery();
   const [tasks, setTasks] = useState([]);
-  const [taskId,setTaskId]=useState("")
-console.log("id",taskId)
+  const [taskId, setTaskId] = useState("");
+  const [activeCard, setActiveCard] = useState(null);
   const [updateTaskStatus] = useUpdateTaskMutation();
   useEffect(() => {
     if (tasksdata) {
       setTasks(tasksdata);
     }
   }, [tasksdata]);
+  console.log(activeCard, "AC");
 
   //Create Task Modal
   const [showModal, setShowModal] = useState(false);
@@ -42,18 +43,30 @@ console.log("id",taskId)
     }
   };
 
- 
-
   const taskModal = () => {
     if (showModal) {
       return (
-        <TaskForm
-          show={showModal}
-          handleClose={handleClose}
-          taskId={taskId}
-        />
+        <TaskForm show={showModal} handleClose={handleClose} taskId={taskId} />
       );
     }
+  };
+
+  const onDrop = (status, position) => {
+    if (activeCard === null || activeCard === undefined) return;
+
+    const taskToMove = tasks.find((task) => task.id === activeCard);
+    if (!taskToMove) return;
+
+    const updatedTasks = tasks.filter((task) => task.id !== activeCard);
+    updatedTasks.splice(position, 0, {
+      ...taskToMove,
+      status: status,
+    });
+
+    setTasks(updatedTasks);
+
+    // Optional: update status in DB
+    updateTaskStatus({ id: activeCard, status });
   };
 
   return (
@@ -81,6 +94,8 @@ console.log("id",taskId)
             onMove={handleMove}
             setTaskId={setTaskId}
             handleOpen={handleOpen}
+            setActiveCard={setActiveCard}
+            onDrop={onDrop}
           />
         ))}
       </div>

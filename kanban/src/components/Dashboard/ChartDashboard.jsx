@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import { FaTasks, FaChartBar } from "react-icons/fa";
 import { Card, Col, Row } from "react-bootstrap";
-
+import './ChartDashboard.css'
 const statusColors = ["#a9dfbf", "#ffe082", "#b2ebf2"];
 const priorityColors = ["#f5b7b1", "#ffb74d", "#d6d8db"];
 
@@ -42,7 +42,7 @@ function ChartDashboard({ tasks }) {
   ];
 
   return (
-    <div className="mt-5 container">
+    <div >
       <h3 className="mb-4 text-center fw-bold"> Task Overview</h3>
       <Row>
         {/* Pie Chart: Task Status */}
@@ -52,7 +52,7 @@ function ChartDashboard({ tasks }) {
               <FaTasks className="me-2" />
               Tasks by Status
             </h5>
-            <div className="d-flex justify-content-center">
+            <div className="center">
               <PieChart width={350} height={350}>
                 <Pie
                   data={statusData}
